@@ -741,6 +741,7 @@ a:hover {
 	background: transparent;
 	color: rgba(0,0,0,.6);
 	transition: color .2s;
+	line-height: 44px;
 }
 #feeds-holder .dijitTreeRow:hover {
 	background: #e5e5e5;
@@ -771,17 +772,18 @@ a:hover {
 	margin: 0 2px;
 	background-image: url("nextcloud/icons.png");
 	background-size: 176px 32px;
-	opacity: .2;
+	opacity: .6;
 }
 #feeds-holder .dijitTreeExpandoClosed:hover,
 #feeds-holder .dijitTreeExpandoOpened:hover {
-	opacity: .35;
+	opacity: .8;
 }
 #feeds-holder .dijitTreeExpandoClosed {
 	background-position: 0 0;
 }
 #feeds-holder .dijitTreeExpandoOpened {
 	background-position: -16px 0;
+	opacity: 1;
 }
 #feeds-holder .labelColorIndicator,
 #feeds-holder .tinyFeedIcon {
@@ -801,6 +803,10 @@ a:hover {
 /* special feeds section */
 #feeds-holder #feedTree > .dijitTreeContainer > .dijitTreeNode > .dijitTreeNodeContainer > .dijitTreeNode:first-child {
 	margin-bottom: 28px;
+}
+#feeds-holder #feedTree > .dijitTreeContainer > .dijitTreeNode > .dijitTreeNodeContainer > .dijitTreeNode:first-child > .dijitTreeNodeContainer .dijitTreeRow {
+	margin-left: -4px;
+	padding-left: 0 !important;
 }
 #feeds-holder #feedTree > .dijitTreeContainer > .dijitTreeNode > .dijitTreeNodeContainer > .dijitTreeNode:first-child > .dijitTreeNodeContainer .tinyFeedIcon {
 	margin-right: 4px;
