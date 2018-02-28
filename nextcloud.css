@@ -1,6 +1,6 @@
 /* supports-version:17.12 */
 
-@import url(feedly/claro-mod.min.css);
+@import url(nextcloud/claro-mod.min.css);
 
 /*
 @font-face format for multiple browser support with local fonts preferred:
@@ -13,8 +13,8 @@
 		local('Arial Narrow'),                      // Windows, Chrome won't find 'Arial Narrow Bold' and fall back to this declaration
 		local('Liberation Sans Narrow Bold'),       // Same for Linux, Liberation Sans Narrow is a perfect, widely used equivalent
 		local('Liberation Sans Narrow'),            // Prefer Liberation over Nimbus which might come as ugly false-condensed
-		url('feedly/fonts/texgyreheroscn-bold-webfont.woff') format('woff'),       // ... if no local font is found, use the webfont
-		url('feedly/fonts/texgyreheroscn-bold-webfont.ttf') format('truetype');    // woff and ttf are enough; we don't support oldIEs
+		url('nextcloud/fonts/texgyreheroscn-bold-webfont.woff') format('woff'),       // ... if no local font is found, use the webfont
+		url('nextcloud/fonts/texgyreheroscn-bold-webfont.ttf') format('truetype');    // woff and ttf are enough; we don't support oldIEs
 */
 
 @font-face {
@@ -23,8 +23,8 @@
 	font-weight: normal;
 	src: local('Arial Narrow'),
 		local('Liberation Sans Narrow'),
-		url('feedly/fonts/texgyreheroscn-regular-webfont.woff') format('woff'),
-		url('feedly/fonts/texgyreheroscn-regular-webfont.ttf') format('truetype');
+		url('nextcloud/fonts/texgyreheroscn-regular-webfont.woff') format('woff'),
+		url('nextcloud/fonts/texgyreheroscn-regular-webfont.ttf') format('truetype');
 }
 @font-face {
 	font-family: 'SansCn';
@@ -35,8 +35,8 @@
 		local('Arial Narrow'),
 		local('Liberation Sans Narrow Bold'),
 		local('Liberation Sans Narrow'),
-		url('feedly/fonts/texgyreheroscn-bold-webfont.woff') format('woff'),
-		url('feedly/fonts/texgyreheroscn-bold-webfont.ttf') format('truetype');
+		url('nextcloud/fonts/texgyreheroscn-bold-webfont.woff') format('woff'),
+		url('nextcloud/fonts/texgyreheroscn-bold-webfont.ttf') format('truetype');
 }
 @font-face {
 	font-family: 'SansCn';
@@ -46,8 +46,8 @@
 		local('Arial Narrow'),
 		local('Liberation Sans Narrow Italic'),
 		local('Liberation Sans Narrow'),
-		url('feedly/fonts/texgyreheroscn-italic-webfont.woff') format('woff'),
-		url('feedly/fonts/texgyreheroscn-italic-webfont.ttf') format('truetype');
+		url('nextcloud/fonts/texgyreheroscn-italic-webfont.woff') format('woff'),
+		url('nextcloud/fonts/texgyreheroscn-italic-webfont.ttf') format('truetype');
 }
 @font-face {
 	font-family: 'SansCn';
@@ -57,8 +57,8 @@
 		local('Arial Narrow'),
 		local('Liberation Sans Narrow Bold Italic'),
 		local('Liberation Sans Narrow'),
-		url('feedly/fonts/texgyreheroscn-bolditalic-webfont.woff') format('woff'),
-		url('feedly/fonts/texgyreheroscn-bolditalic-webfont.ttf') format('truetype');
+		url('nextcloud/fonts/texgyreheroscn-bolditalic-webfont.woff') format('woff'),
+		url('nextcloud/fonts/texgyreheroscn-bolditalic-webfont.ttf') format('truetype');
 }
 
 
@@ -220,7 +220,7 @@ div.filterTestHolder {
 ul.nomarks {
 	list-style-type : none;
 	margin : 0px;
-	padding : 10px; 
+	padding : 10px;
 }
 
 /* @473 */
@@ -557,7 +557,8 @@ a:hover {
 #main,
 #feeds-holder,
 #headlines-wrap-inner .dijitSplitter {
-	background: #eee;
+	border-right: 1px solid #ebebeb;
+	background: #fff;
 }
 #header-wrap,
 #content-wrap,
@@ -682,7 +683,7 @@ a:hover {
 	padding: 0;
 	width: 16px;
 	height: 16px;
-	background: transparent url("feedly/icons.png") 0 -16px no-repeat;
+	background: transparent url("nextcloud/icons.png") 0 -16px no-repeat;
 	background-size: 176px 32px;
 	text-indent: 101%;
 	opacity: .2;
@@ -700,7 +701,7 @@ a:hover {
 	overflow: visible;
 }
 #feeds-holder #feedTree {
-	margin: 0 -5px 0 -30px;
+	margin-top: -30px;
 	height: 100% !important;
 }
 #feeds-holder #feedTree > .dijitTreeContainer {
@@ -733,8 +734,8 @@ a:hover {
 }
 #feeds-holder .dijitTreeRow {
 	padding: 5px 25px 5px 0;
+	opacity: 0.57;
 	border: 0;
-	border-left: 27px solid transparent;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	background: transparent;
@@ -746,7 +747,8 @@ a:hover {
 }
 #feeds-holder .dijitTreeRow.dijitTreeRowSelected {
 	transition: none;
-	background: #ddd;
+	opacity: 1;
+	box-shadow: inset 2px 0 #0082c9;
 }
 #feeds-holder .dijitTreeLabel.Unread {
 	font-weight: bold;
@@ -767,7 +769,7 @@ a:hover {
 #feeds-holder .dijitTreeExpandoClosed,
 #feeds-holder .dijitTreeExpandoOpened {
 	margin: 0 2px;
-	background-image: url("feedly/icons.png");
+	background-image: url("nextcloud/icons.png");
 	background-size: 176px 32px;
 	opacity: .2;
 }
@@ -799,10 +801,6 @@ a:hover {
 /* special feeds section */
 #feeds-holder #feedTree > .dijitTreeContainer > .dijitTreeNode > .dijitTreeNodeContainer > .dijitTreeNode:first-child {
 	margin-bottom: 28px;
-}
-#feeds-holder #feedTree > .dijitTreeContainer > .dijitTreeNode > .dijitTreeNodeContainer > .dijitTreeNode:first-child > .dijitTreeNodeContainer .dijitTreeRow {
-	margin-left: -4px;
-	padding-left: 0 !important;
 }
 #feeds-holder #feedTree > .dijitTreeContainer > .dijitTreeNode > .dijitTreeNodeContainer > .dijitTreeNode:first-child > .dijitTreeNodeContainer .tinyFeedIcon {
 	margin-right: 4px;
@@ -1302,7 +1300,7 @@ div.articleNote {
 	right: 5px;
 	width: 16px;
 	height: 16px;
-	background: transparent url("feedly/icons.png") -16px -16px no-repeat;
+	background: transparent url("nextcloud/icons.png") -16px -16px no-repeat;
 	background-size: 176px 32px;
 	content: "";
 	opacity: .3;
@@ -1562,7 +1560,7 @@ div.articleNote {
 	padding-top: 16px;
 	width: 16px;
 	height: 0;
-	background: transparent url("feedly/icons.png") -160px 0 no-repeat;
+	background: transparent url("nextcloud/icons.png") -160px 0 no-repeat;
 	background-size: 176px 32px;
 	opacity: .2;
 	transition: opacity .2s;
@@ -1654,23 +1652,23 @@ hack inspired by browserhacks.com */
 		background: #6b5;
 		opacity: 1;
 		transition: none;
-		-webkit-mask: url("feedly/icons.png") -64px 0/176px 32px;
-		mask: url("feedly/icons.png") -64px 0/176px 32px;
+		-webkit-mask: url("nextcloud/icons.png") -64px 0/176px 32px;
+		mask: url("nextcloud/icons.png") -64px 0/176px 32px;
 	}
 	#floatingTitle img[src*='images/pub_set'],
 	#headlines-frame img[src*='images/pub_set'] {
 		background: #e84;
 		opacity: 1;
 		transition: none;
-		-webkit-mask: url("feedly/icons.png") -80px 0/176px 32px;
-		mask: url("feedly/icons.png") -80px 0/176px 32px;
+		-webkit-mask: url("nextcloud/icons.png") -80px 0/176px 32px;
+		mask: url("nextcloud/icons.png") -80px 0/176px 32px;
 	}
 	#headlines-frame .rchk.dijitCheckBoxChecked {
 		background: #db0;
 		opacity: 1;
 		transition: none;
-		-webkit-mask: url("feedly/icons.png") -160px 0/176px 32px;
-		mask: url("feedly/icons.png") -160px 0/176px 32px;
+		-webkit-mask: url("nextcloud/icons.png") -160px 0/176px 32px;
+		mask: url("nextcloud/icons.png") -160px 0/176px 32px;
 	}
 }}
 
@@ -1768,6 +1766,12 @@ label.dijitButton:hover:active,
 	padding : 0px;
 }
 
+.dijitAccordionChildWrapper {
+	margin: 0 !important;
+	position: relative;
+	width: 100%;
+}
+
 /* @62 */
 div.prefProfileHolder, div.prefFeedOPMLHolder, div.inactiveFeedHolder {
 	height : 300px;
@@ -1854,6 +1858,9 @@ table.prefErrorLog td.filename, table.prefErrorLog td.login, table.prefErrorLog 
 	width: 150px;
 	border-top: 1px solid #d8d8d8;
 	content: "";
+}
+.nowrapTabStrip {
+        width: 100% !important;
 }
 .ttrss_prefs #footer {
 	padding: 0 10px 5px;
