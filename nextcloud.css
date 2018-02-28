@@ -1074,7 +1074,7 @@ a:hover {
 .cdm.expanded {
 	overflow: hidden;
 	margin-bottom: 17px;
-	border: 1px solid #eee;
+	border-bottom: 1px solid #ededed;
 }
 .cdm.expandable.active .cdmExcerpt {
 	display: none;
