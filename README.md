@@ -6,7 +6,7 @@ nextcloud theme for [Tiny Tiny RSS](https://git.tt-rss.org/git/tt-rss/wiki) 1.15
 
 For the best experience, use a current browser. IE9 and older versions are not supported.
 
-This theme is tested in Chrome on a regular basis and should work fine in IE10 and recent versions of Safari, Firefox (28+) and Opera (15+) as well.
+This theme is tested in Firefox on a regular basis and should work fine in IE10 and recent versions of Safari, Chrome and Opera (15+) as well.
 
 ## Installation
 
