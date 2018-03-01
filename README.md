@@ -24,4 +24,8 @@ Install steps (If you did not find the description on the [TT-RSS Homepage](http
 
 5. Go into your TT-RSS preferences and select the nextcloud-theme.
 
+## Screenshots
+
+![expandable](./screenshots/Screenshot1.png)
+
 Licensed under the WTFPL
