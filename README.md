@@ -32,4 +32,6 @@ Install steps (If you did not find the description on the [TT-RSS Homepage](http
 
 </details>
 
+---
+
 Licensed under the WTFPL
